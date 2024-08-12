@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish NavBar with Background Image</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js"></script>
+</head>
+<body>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background: url('bg1.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h1 {
+    color: #fff;
+    font-size: 24px;
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    transition: background 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.navbar a.active {
+    background-color: #04AA6D;
+    border-radius: 5px;
+}
+
+</style>
+    <div class="navbar">
+        <div class="logo">
+            <h1>MyWebsite</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+<script>
+function toggleMenu() {
+    var navbar = document.getElementById("myNavbar");
+    if (navbar.className === "navbar") {
+        navbar.className += " responsive";
+    } else {
+        navbar.className = "navbar";
+    }
+}
+</script>
+</body>
+</html>
